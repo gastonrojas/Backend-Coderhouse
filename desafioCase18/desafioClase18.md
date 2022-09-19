@@ -233,7 +233,7 @@ a) Agrego un nuevo producto
 ### Input
 
 ```sh
-  db.products.insertOne({name:"ojotas", price: 4330, image: "none"})
+  db.products.insertOne({title:"ojotas", price: 4330, image: "none"})
 ```
 
 ### Output
@@ -259,19 +259,19 @@ db.products.find({price:{$lt: 1000}})
 [
   {
     _id: ObjectId("6286a05e0aa214cf81fac385"),
-    name: 'remera',
+    title: 'remera',
     price: 105,
     image: 'none'
   },
   {
     _id: ObjectId("6286a0d83ac0fb1a71aa3640"),
-    name: 'remeraRoja',
+    title: 'remeraRoja',
     price: 590,
     image: 'none'
   },
   {
     _id: ObjectId("6286a0eb3ac0fb1a71aa3641"),
-    name: 'remeraAzul',
+    title: 'remeraAzul',
     price: 880,
     image: 'none'
   }
@@ -292,25 +292,25 @@ b) ii) Listar los productos con precio entre los 1000 a 3000 pesos.
   [
   {
     _id: ObjectId("6286a1043ac0fb1a71aa3642"),
-    name: 'pantalonRiverPlate',
+    title: 'pantalonRiverPlate',
     price: 1300,
     image: 'none'
   },
   {
     _id: ObjectId("6286a11b3ac0fb1a71aa3643"),
-    name: 'pantalonJean',
+    title: 'pantalonJean',
     price: 1799,
     image: 'none'
   },
   {
     _id: ObjectId("6286a15b3ac0fb1a71aa3645"),
-    name: 'remeraRiverPlate',
+    title: 'remeraRiverPlate',
     price: 2800,
     image: 'none'
   },
   {
     _id: ObjectId("6286a1703ac0fb1a71aa3646"),
-    name: 'remeraRiverPlateNegra',
+    title: 'remeraRiverPlateNegra',
     price: 2999,
     image: 'none'
   }
@@ -331,25 +331,25 @@ b) iii) Listar los productos con precio mayor a 3000 pesos.
 [
   {
     _id: ObjectId("6286a1333ac0fb1a71aa3644"),
-    name: 'pantalonCuero',
+    title: 'pantalonCuero',
     price: 3255,
     image: 'none'
   },
   {
     _id: ObjectId("6286a1923ac0fb1a71aa3647"),
-    name: 'buzoRiverPlate',
+    title: 'buzoRiverPlate',
     price: 4360,
     image: 'none'
   },
   {
     _id: ObjectId("6286a1ac3ac0fb1a71aa3648"),
-    name: 'camperonRiverPlate',
+    title: 'camperonRiverPlate',
     price: 4999,
     image: 'none'
   },
   {
     _id: ObjectId("6286b05f3ac0fb1a71aa3653"),
-    name: 'ojotas',
+    title: 'ojotas',
     price: 4330,
     image: 'none'
   }
