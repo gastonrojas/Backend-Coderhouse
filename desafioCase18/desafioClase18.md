@@ -250,7 +250,7 @@ b) i) Listo os productos con precio menor a 1000
 ### Input
 
 ```sh
-db.productos.find({price:{$lt: 1000}})
+db.products.find({price:{$lt: 1000}})
 ```
 
 ### Output
@@ -283,7 +283,7 @@ b) ii) Listar los productos con precio entre los 1000 a 3000 pesos.
 ### Input
 
 ```sh
-  db.productos.find({$and:[ {price:{$gt: 1000}}, {price:{$lt: 3000}}]})
+  db.products.find({$and:[ {price:{$gt: 1000}}, {price:{$lt: 3000}}]})
 ```
 
 ### Output
@@ -322,7 +322,7 @@ b) iii) Listar los productos con precio mayor a 3000 pesos.
 ### Input 
 
 ```sh
-  db.productos.find({price:{$gt: 3000}})
+  db.products.find({price:{$gt: 3000}})
 ```
 
 ### Output
