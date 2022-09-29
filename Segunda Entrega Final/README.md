@@ -5,7 +5,7 @@ En este desarrolo de backend ecommerce se crearon 4 modos distintos de contenedo
 - Contenedor de datos en memoria.
 - Contenedor de datos en archivo JSON.
 - Contenedor de datos en MongoDb Altlas.
-= Contenedor de datos en Firebase.
+- Contenedor de datos en Firebase.
 
 En las rutas de este servidor se utiliza una instancia de persistencia a travez de un data acces object(DAO). El DAO para los carritosse define el index de la carpeta src/dao/carritos o y para los productos en src/dao/productos. Se tomma la variable de entorno process.argv[2] para indicar que tipo de persistencia utilizaremos.
 
