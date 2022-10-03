@@ -1,6 +1,6 @@
 import Router from 'express';
 
-import generateProduct from '../utils/fakerProducts/fakerPorducts.js';
+import generateProduct from '../fakerProducts/fakerPorducts.js';
 const productsTest = new Router
 
 
