@@ -23,7 +23,7 @@ io.on('connection', async (socket) => {
 
   socket.on('newMessage', async (newMessage) => {
     await messages.save(newMessage);
-    io.sockets.emit('messages', await normalizeMessages());
+    io.sockets.emit('messages', normalize(await messages.getAll(), [messageSchema]));
   });
 });
 

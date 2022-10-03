@@ -3,7 +3,7 @@ import productsTest from './src/routes/products-test.js';
 
 export const app = express();
 
-app.set('views', './views');
+app.set('views', '.public/views');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
