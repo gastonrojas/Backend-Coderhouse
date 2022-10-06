@@ -9,13 +9,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const mongoUrl = JSON.parse(await fs.promises.readFile(__dirname + '/mongodb.json', 'utf-8'))
 
 export const sessionConfig = {
-    store: MongoStore.create({mongoUrl}),
+    store: MongoStore.create({mongoUrl, ttl: 600}),
     secret: 'manzana',
     resave: false,
     saveUninitialized: false,
-    cookie: {
-        maxAge: 600000,
-      }
 }
 
 export default mongoUrl
