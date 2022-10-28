@@ -1,5 +1,4 @@
 const getRandomNumbers = (cant) => {
-    console.log(parseInt(cant))
   let qty;
   if (typeof(parseInt(cant)) != 'number' || isNaN(parseInt(cant))) qty = 100000;
   else qty = cant;

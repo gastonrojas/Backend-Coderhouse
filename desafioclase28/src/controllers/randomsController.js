@@ -12,7 +12,6 @@ const randomsController = (req, res) =>{
             forked.send(CANT)
         } else {
             res.json(msg)
-            // console.log(msg)
         }
     })
 
