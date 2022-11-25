@@ -1,0 +1,31 @@
+{
+  "type": "module",
+  "name": "proyecto-final",
+  "version": "3.0.0",
+  "description": "tercera preentrega del proyecto final",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon .",
+    "start": "node ."
+  },
+  "keywords": [
+    "backend",
+    "coderhouse",
+    "proyecto final",
+    "preentrega"
+  ],
+  "author": "Gaston Rojas",
+  "license": "pending",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongodb": "4.10",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pino": "^8.7.0"
+  }
+}
