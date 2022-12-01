@@ -1,6 +1,7 @@
 import { products } from "../containers/MongodbContainer.js";
 import createProduct from "../api/createProduct.js";
 import createUpdatedProduct from "../api/createUpdatedProduct.js";
+import {logger, fileLogger} from '../utils/loggers.js';
 
 const productsController = {
     async products(req, res){

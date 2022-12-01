@@ -16,4 +16,11 @@ export const sessionConfig = {
     saveUninitialized: false,
 }
 
+export const  googleAuth = {
+    user: process.env.GOOGLE_MAIL,
+    pass: process.env.GOOGLE_PASSWORD
+}
+
+export const ADMIN_MAIL = process.env.ADMIN_MAIL
+
 export default mongoUrl

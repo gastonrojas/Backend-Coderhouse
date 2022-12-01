@@ -1,9 +1,8 @@
-// import pino from 'pino';
 import { MongoClient } from 'mongodb';
 
-import mongoConectionStr from '../../config.js';
+import mongoConectionStr from '../config.js';
 
-// const logger = pino('pinoLogs/error.log')
+import {logger, fileLogger} from '../utils/loggers.js';
 
 class MongodbContainer {
   constructor(uri, db, collection) {
@@ -14,22 +13,26 @@ class MongodbContainer {
   };
   async getAll() {
     try {
-      const all = this.collection.find({}, this.options).toArray();
-      if(!all) throw new Error('error en base de datos')
-      return await this.collection.find({}, this.options).toArray()
+      const allObjects = await this.collection.find({}, this.options).toArray();
+      return allObjects
     } catch (error) {
-      console.log(error)
+      logger.error(error)
+      fileLogger.error(error)
+      throw new Error('error en base de datos')
     }
   };
   async getByField(query){
     try {
       const result = await this.collection.findOne(query, this.options)
-      if (!result) throw new Error('No se pudo acceder a la base de datos!')
+      if (!result) throw new Error('No encontramos ninguna coincidencia')
       return result
     } catch (error) {
+      logger.warn(error)
+      fileLogger.warn(error)
       return null
     }
   }
+
   
   async getbyId(id){
     try {
@@ -37,14 +40,17 @@ class MongodbContainer {
       if (!result) throw new Error('NOT_FOUND: Datos incorrectos. Intente nuevamente.')
       return result
     } catch (error) {
-      console.log(error)
+      logger.error(error)
+      fileLogger.error(error)
+      throw error
     }
   }
   async save(obj) {
     try{
       await this.collection.insertOne(obj);
     }catch(error){
-      console.log(error)
+      logger.error(error)
+      fileLogger.error(error)
     }
   };
 
@@ -54,15 +60,46 @@ class MongodbContainer {
       await this.collection.replaceOne({id: obj.id}, obj)
 
     } catch{
-      console.log(error)
+      logger.error(error)
+      fileLogger.error(error)
     }
   };
   async deleteById(id){
+      try {
+        await this.collection.deleteOne({id})
+      } catch (error) {
+        logger.error(error)
+        fileLogger.error(error)
+        throw new Error('Error en base de datos')
+      }
+  }
+
+  async pushToArray(id, array, element){
     try {
-      await this.collection.deleteOne({id})
-      res.sendStatus(200)
+      await this.collection.updateOne( { id }, { $push: {[array]: element} });
     } catch (error) {
-      res.status(500).json(error)
+      logger.error(error)
+      fileLogger.error(error)
+      throw new Error('Error en base de datos')
+    }
+  }
+
+  async removeFromArray(id, array, idObject){
+    try {
+      if(idObject) {
+        const cart =  await this.collection.findOne({id}, this.options);
+        const cartProducts = cart.products;
+        const indexOfElementToRemove = cartProducts.findIndex(prod=> prod.id == idObject)
+        if (indexOfElementToRemove == -1) throw new Error('ERROR: ingrese un producto a eliminar')
+        cartProducts.splice(indexOfElementToRemove, 1)
+        await this.collection.updateOne({ id }, { $set: { [array]: cartProducts }})
+      }else{
+        this.collection.updateOne({ id }, { $set: { [array]: [] } })
+        }
+    } catch (error) {
+      logger.error(error)
+      fileLogger.error(error)
+      throw new Error('Error en base de datos')
     }
   }
 };

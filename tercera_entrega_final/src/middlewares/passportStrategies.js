@@ -6,17 +6,21 @@ import createUser from '../api/createUser.js';
 import users from '../containers/MongodbContainer.js';
 import { carts } from '../containers/MongodbContainer.js';
 import createCart from '../api/createCart.js';
+import { sendResgiterMailToAdmin } from '../api/createMail.js'
+import { ADMIN_MAIL } from '../config.js'
+
 
 export const registroLocal = new Strategy({
     passReqToCallback: true,
 },
     async (req, username, password, done) => {
         try {
-            await ensureUniqueEmail(username)
-            const user = await createUser({...req.body, image: 'default.jpg'})
+            await ensureUniqueEmail(username);
+            const user = await createUser({...req.body});
             await users.save(user);
-            const userCart = createCart(user.id)
-            await carts.save(userCart)
+            const userCart = createCart(user.id);
+            const mailSent = await sendResgiterMailToAdmin(user, ADMIN_MAIL);
+            await carts.save(userCart);
 
             done(null, user);
 

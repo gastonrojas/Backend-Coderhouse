@@ -1,45 +1,23 @@
-# Preentrega: Segunda Entrega del Proyecto Final
+# Preentrega: Tercera Entrega del Proyecto Final
 
-En este desarrolo de backend ecommerce se crearon 4 modos distintos de contenedores de datos:
+En esta entrega seguimos con la aplicacion de tipo servidor ecommerce-backend de arquitectura API rest.
 
-- Contenedor de datos en memoria.
-- Contenedor de datos en archivo JSON.
-- Contenedor de datos en MongoDb Altlas.
-- Contenedor de datos en Firebase.
+El punto de entrada a la aplicacion se encuentra en src/main.js pudiendo utilizar los scripts npm start p npm test para
+inicializar el servidor. Si pasamos como variable de entorno MODE="cluster" el servidor se inicializara en modo cluster.
+El servidor puede ser accedido a travez del puerto 8080 o al puerto que se indique a travez de la variable de entorno PORT.
 
-En las rutas de este servidor se utiliza una instancia de persistencia a travez de un data acces object(DAO). El DAO para los carritosse define el index de la carpeta src/dao/carritos o y para los productos en src/dao/productos. Se tomma la variable de entorno process.argv[2] para indicar que tipo de persistencia utilizaremos.
+Variables de entorno utilizadas en .env:
+- MONGODB_STRING
+- SESSION
+- GOOGLE_MAIL
+- GOOGLE_PASSWORD
+- ADMIN_MAIL
 
+Las variables de entorno son captadas en src/config.js y de ahi exportadas.
 
-## Para definir que tipo de DAO se utilizara se utlizaran los siguientes scripts
+Se utilizo passport con la estrategia de passport-local para registrar y logear usuaios.
 
-### Contenedor en memoria:
+Como persistencia en base de datos se utlizo MongoDb Atlas a travez del modulo nativo de MongoDB.
 
-```sh
-    npm run start
-```
-Con el mismo se corre el script node server.js
-
-### Contenedor en archivo JSON.
-
-```sh
-    npm run startJson
-```
-Con el mismo se corre el script node server.js json
-
-### Contenedor en mongodb atlas
-
-```sh
-    npm run startMongo
-```
-
-Con el mismo se corre el script node server.js mongo
-
-### Contenedor en mongodb atlas
-
-```sh
-    npm run startFirebase
-```
-
-Con el mismo se corre el script node server.js firebase
-
-Tanto como la variable de entorno como las opciones de conexion se encuentran en al archivo config.js.
+Todas las pruebas fueron realizadas con postman.
+La coleccion de todas las peticiones utilizadas para probar el servidor se encuentran

@@ -5,10 +5,18 @@ const usersController = {
         successRedirect: '/auth/successRegister',
         failureRedirect: '/auth/failRegister',
       }),
-      login: passport.authenticate('login', {
+    login: passport.authenticate('login', {
         successRedirect: '/auth/successLogin',
         failureRedirect: '/auth/failLogin',
-      }),
+    }),
+
+    userInfo(req, res){
+      let user = req.user;
+      delete user.password;
+      delete user.id
+      res.status(200).json(user)
+    },
+
     logout(req, res){
         if (req.isAuthenticated()) {
             req.logout((err) => {

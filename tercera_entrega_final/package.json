@@ -3,7 +3,7 @@
   "name": "proyecto-final",
   "version": "3.0.0",
   "description": "tercera preentrega del proyecto final",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "nodemon .",
     "start": "node ."
@@ -24,6 +24,7 @@
     "express-session": "^1.17.3",
     "mongodb": "4.10",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.8.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "pino": "^8.7.0"
