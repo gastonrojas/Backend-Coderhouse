@@ -1,0 +1,709 @@
+Statistical profiling result from without_log.log, (3130 ticks, 1 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2533   80.9%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+    409   13.1%          /usr/lib/x86_64-linux-gnu/libc.so.6
+     76    2.4%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+      3    0.1%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     16    0.5%   14.7%  LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      6    0.2%    5.5%  LazyCompile: *resolve node:path:1091:10
+      4    0.1%    3.7%  LazyCompile: *normalizeString node:path:66:25
+      3    0.1%    2.8%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      2    0.1%    1.8%  LazyCompile: *handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:136:31
+      2    0.1%    1.8%  LazyCompile: *dirname node:path:1275:10
+      2    0.1%    1.8%  Function: ^shouldSetCookie /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:464:29
+      2    0.1%    1.8%  Function: ^resolve node:path:1091:10
+      2    0.1%    1.8%  Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      2    0.1%    1.8%  Function: ^isModified /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:425:24
+      2    0.1%    1.8%  Function: ^generate /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:363:22
+      2    0.1%    1.8%  Function: *wasm-function[15]
+      1    0.0%    0.9%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    0.9%  RegExp: ^[!#$%&'*+\-.^_`|~0-9A-Za-z]+$
+      1    0.0%    0.9%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    0.9%  RegExp: ; *([!#$%&'*+.^_`|~0-9A-Za-z-]+) *= *("(?:[\u000b\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\u000b\u0020-\u00ff])*"|[!#$%&'*+.^_`|~0-9A-Za-z-]+) *
+      1    0.0%    0.9%  RegExp: (\\\/)?(\\\.)?:(\w+)(\(.*?\))?(\*)?(\?)?
+      1    0.0%    0.9%  LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      1    0.0%    0.9%  LazyCompile: *getEncodingOps node:buffer:684:24
+      1    0.0%    0.9%  LazyCompile: *asString /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/lib/tools.js:66:19
+      1    0.0%    0.9%  LazyCompile: *Hash node:internal/crypto/hash:62:14
+      1    0.0%    0.9%  Function: ^writeHead node:_http_server:338:19
+      1    0.0%    0.9%  Function: ^wrapmethods /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:394:25
+      1    0.0%    0.9%  Function: ^wrapSafe node:internal/modules/cjs/loader:1073:18
+      1    0.0%    0.9%  Function: ^validateString node:internal/validators:161:24
+      1    0.0%    0.9%  Function: ^updateChildren node:internal/modules/cjs/loader:184:24
+      1    0.0%    0.9%  Function: ^trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      1    0.0%    0.9%  Function: ^socketOnDrain node:_http_server:709:23
+      1    0.0%    0.9%  Function: ^setCharset /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/utils.js:248:41
+      1    0.0%    0.9%  Function: ^set /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/application.js:359:23
+      1    0.0%    0.9%  Function: ^session /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:179:26
+      1    0.0%    0.9%  Function: ^serveStatic /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/serve-static/index.js:72:31
+      1    0.0%    0.9%  Function: ^restore /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:631:17
+      1    0.0%    0.9%  Function: ^remove node:internal/linkedlist:16:16
+      1    0.0%    0.9%  Function: ^query /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/middleware/query.js:39:24
+      1    0.0%    0.9%  Function: ^processPromiseRejections node:internal/process/promises:220:34
+      1    0.0%    0.9%  Function: ^popAsyncContext node:internal/async_hooks:553:25
+      1    0.0%    0.9%  Function: ^onResponseHeaders /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/compression/index.js:140:47
+      1    0.0%    0.9%  Function: ^next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:728:17
+      1    0.0%    0.9%  Function: ^next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      1    0.0%    0.9%  Function: ^matchHeader node:_http_outgoing:577:21
+      1    0.0%    0.9%  Function: ^isUint8Array node:internal/util/types:13:22
+      1    0.0%    0.9%  Function: ^isBuffer node:buffer:515:36
+      1    0.0%    0.9%  Function: ^initAsyncResource node:internal/timers:154:27
+      1    0.0%    0.9%  Function: ^infoController file:///home/gaston/Backend-Coderhouse/desafioClase32/src/controllers/infoController.js:3:24
+      1    0.0%    0.9%  Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/application.js:165:29
+      1    0.0%    0.9%  Function: ^getProtohost /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:546:22
+      1    0.0%    0.9%  Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1    0.0%    0.9%  Function: ^generateETag /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/utils.js:273:32
+      1    0.0%    0.9%  Function: ^etag /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/etag/index.js:70:15
+      1    0.0%    0.9%  Function: ^end /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/compression/index.js:92:28
+      1    0.0%    0.9%  Function: ^emitReadable_ node:internal/streams/readable:586:23
+      1    0.0%    0.9%  Function: ^emitBeforeScript node:internal/async_hooks:509:26
+      1    0.0%    0.9%  Function: ^emit node:events:460:44
+      1    0.0%    0.9%  Function: ^dispatch /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/route.js:98:45
+      1    0.0%    0.9%  Function: ^dirname node:path:1275:10
+      1    0.0%    0.9%  Function: ^decode /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:997:17
+      1    0.0%    0.9%  Function: ^createError /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/http-errors/index.js:49:22
+      1    0.0%    0.9%  Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    0.0%    0.9%  Function: ^clearBuffer node:internal/streams/writable:532:21
+      1    0.0%    0.9%  Function: ^asString /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/lib/tools.js:66:19
+      1    0.0%    0.9%  Function: ^asJson /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/lib/tools.js:91:17
+      1    0.0%    0.9%  Function: ^append /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/vary/index.js:38:17
+      1    0.0%    0.9%  Function: ^app /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/express.js:38:21
+      1    0.0%    0.9%  Function: ^_finish node:_http_outgoing:1033:53
+      1    0.0%    0.9%  Function: ^_addListener node:events:541:22
+      1    0.0%    0.9%  Function: ^Stats node:internal/fs/utils:501:15
+      1    0.0%    0.9%  Function: ^Socket._writev node:net:923:36
+      1    0.0%    0.9%  Function: ^SessionStrategy.authenticate /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/passport/lib/strategies/session.js:45:50
+      1    0.0%    0.9%  Function: ^Session /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/session/session.js:24:17
+      1    0.0%    0.9%  Function: ^Readable node:internal/streams/readable:186:18
+      1    0.0%    0.9%  Function: ^Module._nodeModulePaths node:internal/modules/cjs/loader:676:37
+      1    0.0%    0.9%  Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1    0.0%    0.9%  Function: ^Hash node:internal/crypto/hash:62:14
+      1    0.0%    0.9%  Function: ^<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/socket.io/dist/index.js:290:27
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+    108    3.5%   99.1%  JavaScript
+      0    0.0%    0.0%  C++
+    122    3.9%  111.9%  GC
+   3021   96.5%          Shared libraries
+      1    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2533   80.9%  /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+   1798   71.0%    /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+    467   26.0%      Function: ^compileFunction node:vm:316:25
+    454   97.2%        Function: ^wrapSafe node:internal/modules/cjs/loader:1073:18
+    449   98.9%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+    424   94.4%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+     25    5.6%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      5    1.1%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      5  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+     13    2.8%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1073:18
+     13  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+     13  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+    100    5.6%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     78   78.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+     11   14.1%          Function: ~<anonymous> node:http:1:1
+     11  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      9   11.5%          Function: ~<anonymous> node:tls:1:1
+      9  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    6.4%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    6.4%          Function: ~<anonymous> node:internal/child_process:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    6.4%          Function: ~<anonymous> node:child_process:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5    6.4%          Function: ~<anonymous> node:_http_client:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    5.1%          LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      4  100.0%            LazyCompile: ~get node:crypto:369:8
+      4    5.1%          LazyCompile: ~initCJSParse node:internal/modules/esm/translators:58:28
+      4  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:147:60
+      3    3.8%          LazyCompile: ~lazyLoadStreams node:fs:2907:25
+      3  100.0%            LazyCompile: ~get ReadStream node:fs:3050:17
+      3    3.8%          Function: ~<anonymous> node:worker_threads:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    3.8%          Function: ~<anonymous> node:assert:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      3    3.8%          Function: ~<anonymous> node:_http_common:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.6%          LazyCompile: ~get node:dns:350:8
+      2  100.0%            /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      2    2.6%          Function: ~<anonymous> node:https:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.6%          Function: ~<anonymous> node:cluster:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      2    2.6%          Function: ~<anonymous> node:_tls_common:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1    1.3%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:module:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:internal/worker:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:internal/cluster/round_robin_handle:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:internal/assert/assertion_error:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:_tls_wrap:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1    1.3%          Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+     14   14.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:263:25
+     14  100.0%          Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+     14  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      8    8.0%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:263:25
+      8  100.0%          LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      5   62.5%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:807:24
+      3   37.5%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:253:58
+     70    3.9%      /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      7   10.0%        Function: ^checkInvalidHeaderChar node:_http_common:221:32
+      7  100.0%          Function: ^<anonymous> node:_http_outgoing:618:45
+      7  100.0%            Function: ^setHeader node:_http_outgoing:642:57
+      6    8.6%        Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      5   83.3%          Function: ^readPackageScope node:internal/modules/cjs/loader:368:26
+      3   60.0%            Function: ^trySelf node:internal/modules/cjs/loader:488:17
+      1   20.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1   20.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1   16.7%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:385:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      5    7.1%        Function: ^expressInit /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/middleware/init.js:29:30
+      3   60.0%          Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            Function: ^trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      2   40.0%          LazyCompile: *trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      2  100.0%            LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      4    5.7%        Function: ^header /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:777:29
+      4  100.0%          Function: ^json /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:250:25
+      4  100.0%            Function: ^infoController file:///home/gaston/Backend-Coderhouse/desafioClase32/src/controllers/infoController.js:3:24
+      4    5.7%        Function: ^format /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/content-type/index.js:65:17
+      4  100.0%          Function: ^setCharset /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/utils.js:248:41
+      4  100.0%            Function: ^send /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:111:25
+      3    4.3%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:396:36
+      3  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:490:30
+      3  100.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:490:30
+      3    4.3%        Function: ^parse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/content-type/index.js:106:16
+      3  100.0%          Function: ^setCharset /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/utils.js:248:41
+      3  100.0%            Function: ^send /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:111:25
+      3    4.3%        Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:807:24
+      3    4.3%        Function: ^FastBuffer node:internal/buffer:958:14
+      2   66.7%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1   50.0%            LazyCompile: ~allocate node:buffer:403:18
+      1   50.0%            Function: ^allocate node:buffer:403:18
+      1   33.3%          LazyCompile: ~allocate node:buffer:403:18
+      1  100.0%            LazyCompile: ~allocUnsafe node:buffer:378:42
+      2    2.9%        LazyCompile: ~isIPv6 node:internal/net:38:16
+      2  100.0%          LazyCompile: ~isIP node:internal/net:45:14
+      1   50.0%            LazyCompile: ~parseSslOptions /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:237:25
+      1   50.0%            LazyCompile: ~lookupAndConnect node:net:1129:26
+      2    2.9%        LazyCompile: ~db /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/mongo_client.js:193:7
+      1   50.0%          LazyCompile: ~MongodbContainer file:///home/gaston/Backend-Coderhouse/desafioClase32/src/containers/MongodbContainer.js:12:14
+      1  100.0%            Script: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/src/containers/MongodbContainer.js:1:1
+      1   50.0%          LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/connect-mongo/build/main/lib/MongoStore.js:124:42
+      1  100.0%            /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      2    2.9%        LazyCompile: ~compressible /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/compressible/index.js:41:23
+      2  100.0%          LazyCompile: ~shouldCompress /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/compression/index.js:254:25
+      2  100.0%            LazyCompile: ~onResponseHeaders /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/compression/index.js:140:47
+      2    2.9%        Function: ^pipe /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:506:43
+      2  100.0%          Function: ^serveStatic /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/serve-static/index.js:72:31
+      1   50.0%            LazyCompile: *trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      1   50.0%            Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      1    1.4%        LazyCompile: ~trimTabAndNewline /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/whatwg-url/lib/url-state-machine.js:449:27
+      1  100.0%          Function: ^URLStateMachine /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%            LazyCompile: ~module.exports.basicURLParse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1    1.4%        LazyCompile: ~translatePeerCertificate node:_tls_common:125:34
+      1  100.0%          LazyCompile: ~translatePeerCertificate node:_tls_common:125:34
+      1  100.0%            LazyCompile: ~TLSSocket.getPeerCertificate node:_tls_wrap:992:50
+      1    1.4%        LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1  100.0%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1    1.4%        LazyCompile: ~resolveAuthMechanism /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/auth/mongo_credentials.js:76:25
+      1  100.0%          LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%            LazyCompile: ~onMessage /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1    1.4%        LazyCompile: ~populateConstructorExports /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/http-errors/index.js:258:37
+      1  100.0%          Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/http-errors/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1    1.4%        LazyCompile: ~parse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/vary/index.js:96:16
+      1  100.0%          LazyCompile: ~append /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/vary/index.js:38:17
+      1  100.0%            LazyCompile: ~vary /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/vary/index.js:133:15
+      1    1.4%        LazyCompile: ~parse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/dotenv/lib/main.js:11:16
+      1  100.0%          LazyCompile: ~config /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/dotenv/lib/main.js:58:17
+      1  100.0%            Script: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/config.js:1:1
+      1    1.4%        LazyCompile: ~parse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/content-type/index.js:106:16
+      1  100.0%          LazyCompile: ~setCharset /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/utils.js:248:41
+      1  100.0%            LazyCompile: ~send /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:111:25
+      1    1.4%        LazyCompile: ~databaseNamespace /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/utils.js:377:27
+      1  100.0%          LazyCompile: ~Msg /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/commands.js:317:16
+      1  100.0%            LazyCompile: ~command /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1    1.4%        LazyCompile: ~containsNamespace /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/depd/index.js:29:28
+      1  100.0%          LazyCompile: ~istraced /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/depd/index.js:169:19
+      1  100.0%            LazyCompile: ~depd /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/depd/index.js:103:15
+      1    1.4%        LazyCompile: ~command /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/server.js:202:42
+      1  100.0%            LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection_pool.js:284:23
+      1    1.4%        LazyCompile: ~Monitor /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/monitor.js:41:16
+      1  100.0%          LazyCompile: ~Server /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/server.js:29:16
+      1  100.0%            LazyCompile: ~createAndConnectServer /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:473:32
+      1    1.4%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/modules/esm/translators:232:36
+      1    1.4%        LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%          LazyCompile: ~onMessage /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1  100.0%            LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:60:44
+      1    1.4%        LazyCompile: *setHeader node:_http_outgoing:642:57
+      1  100.0%          Function: ^header /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:777:29
+      1  100.0%            Function: ^json /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:250:25
+      1    1.4%        LazyCompile: *realpathSync node:fs:2474:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:440:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:431:17
+      1    1.4%        Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      1    1.4%        Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/connection_string.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    1.4%        Function: ^writeOrBuffer node:internal/streams/writable:368:23
+      1  100.0%          Function: ^_write node:internal/streams/writable:286:16
+      1  100.0%            Function: ^Writable.write node:internal/streams/writable:336:36
+      1    1.4%        Function: ^stat node:internal/modules/cjs/loader:158:14
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:904:35
+      1    1.4%        Function: ^realpathSync node:fs:2474:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:440:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1    1.4%        Function: ^next node:internal/per_context/primordials:288:9
+      1  100.0%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%            Function: ^<anonymous> node:internal/per_context/primordials:452:15
+      1    1.4%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      1    1.4%        Function: ^_destroy node:_http_incoming:221:55
+      1  100.0%          Function: ^_destroy node:internal/streams/destroy:77:18
+      1  100.0%            Function: ^destroy node:internal/streams/destroy:39:17
+     59    3.3%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     59  100.0%        Function: ^Socket._writeGeneric node:net:891:42
+     59  100.0%          Function: ^Socket._writev node:net:923:36
+     59  100.0%            Function: ^doWrite node:internal/streams/writable:401:17
+     58    3.2%      Function: ^memoryUsage node:internal/process/per_thread:169:23
+     58  100.0%        Function: ^infoController file:///home/gaston/Backend-Coderhouse/desafioClase32/src/controllers/infoController.js:3:24
+     58  100.0%          Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+     57   98.3%            Function: ^next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/route.js:116:16
+      1    1.7%            LazyCompile: ~next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/route.js:116:16
+     57    3.2%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      9   15.8%        Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      9  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      9  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      7   12.3%        Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      7  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      7  100.0%            Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      7   12.3%        Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      7  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      7  100.0%            Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      6   10.5%        LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      6  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      6  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      6   10.5%        Function: ~<anonymous> node:internal/fs/promises:1:1
+      6  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      6  100.0%            Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      4    7.0%        Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      4  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      4  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      3    5.3%        Function: ~<anonymous> node:internal/readline/interface:1:1
+      3  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      2    3.5%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    3.5%        Function: ~<anonymous> node:internal/source_map/source_map_cache:1:1
+      2  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%            LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:574:38
+      2    3.5%        Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      2  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      2  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1    1.8%        LazyCompile: ~setupInspectorHooks node:internal/process/pre_execution:372:29
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.8%        LazyCompile: ~setupFetch node:internal/process/pre_execution:198:20
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.8%        LazyCompile: ~initializeSourceMapsHandlers node:internal/process/pre_execution:574:38
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.8%        LazyCompile: ~initializeReport node:internal/process/pre_execution:312:26
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.8%        LazyCompile: ~get BlockList node:net:1980:16
+      1  100.0%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1    1.8%        Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1    1.8%        Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      1    1.8%        Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      1    1.8%        Function: ~<anonymous> node:internal/blocklist:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            LazyCompile: ~get BlockList node:net:1980:16
+     53    2.9%      Function: ^stat node:fs:1513:14
+     53  100.0%        Function: ^sendFile /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:712:51
+     53  100.0%          Function: ^pipe /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:506:43
+     53  100.0%            Function: ^serveStatic /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/serve-static/index.js:72:31
+     52    2.9%      Function: ^initialize /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/passport/lib/middleware/initialize.js:51:29
+     33   63.5%        LazyCompile: *trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+     33  100.0%          LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+     33  100.0%            Function: ^session /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:179:26
+     19   36.5%        Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+     19  100.0%          Function: ^trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+     12   63.2%            Function: ^<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:280:64
+      7   36.8%            LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+     35    1.9%      LazyCompile: ~configSecureContext node:internal/tls/secure-context:124:29
+     35  100.0%        LazyCompile: ~createSecureContext node:_tls_common:99:29
+     35  100.0%          LazyCompile: ~connect node:_tls_wrap:1605:35
+     35  100.0%            LazyCompile: ~makeConnection /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:256:24
+     34    1.9%      Function: ^compression /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/compression/index.js:59:31
+     26   76.5%        LazyCompile: *trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+     26  100.0%          LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+     15   57.7%            Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:136:31
+     11   42.3%            LazyCompile: *handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:136:31
+      8   23.5%        Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      8  100.0%          Function: ^trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      5   62.5%            LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      3   37.5%            Function: ^<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:280:64
+     27    1.5%      Function: ^Hash node:internal/crypto/hash:62:14
+     27  100.0%        Function: ^createHash node:crypto:132:20
+     18   66.7%          Function: ^hash /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:596:14
+     12   66.7%            Function: ^isModified /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:425:24
+      6   33.3%            Function: ^generate /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:363:22
+      9   33.3%          Function: ^entitytag /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/etag/index.js:39:20
+      9  100.0%            Function: ^etag /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/etag/index.js:70:15
+     20    1.1%      Function: ^session /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:179:26
+     11   55.0%        LazyCompile: *trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+     11  100.0%          LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+     11  100.0%            Function: ^jsonParser /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/body-parser/lib/types/json.js:98:30
+      9   45.0%        Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      9  100.0%          Function: ^trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      8   88.9%            LazyCompile: *next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      1   11.1%            Function: ^<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:280:64
+
+    409   13.1%  /usr/lib/x86_64-linux-gnu/libc.so.6
+    227   55.5%    /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+     14    6.2%      /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      3   21.4%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      3  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      2   66.7%            Function: ^<anonymous> node:internal/bootstrap/loaders:290:15
+      1   33.3%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      2   14.3%        Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      1   50.0%          LazyCompile: ~tryPackage node:internal/modules/cjs/loader:385:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1   50.0%          Function: ^tryPackage node:internal/modules/cjs/loader:385:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1    7.1%        LazyCompile: ~splitHost node:tls:170:19
+      1  100.0%          LazyCompile: ~checkServerIdentity node:tls:280:59
+      1  100.0%            LazyCompile: ~onConnectSecure node:_tls_wrap:1524:25
+      1    7.1%        LazyCompile: ~pipe /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:506:43
+      1  100.0%          LazyCompile: ~serveStatic /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/serve-static/index.js:72:31
+      1  100.0%            LazyCompile: ~handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      1    7.1%        LazyCompile: ~parsePackageName node:internal/modules/esm/resolve:765:26
+      1  100.0%          LazyCompile: ~packageResolve node:internal/modules/esm/resolve:804:24
+      1  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:894:23
+      1    7.1%        Function: ~<anonymous> node:internal/modules/esm/assert:1:1
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1    7.1%        Function: ^toString /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/uid-safe/index.js:102:19
+      1  100.0%          Function: ^uidSync /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/uid-safe/index.js:75:18
+      1  100.0%            Function: ^generateSessionId /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:518:27
+      1    7.1%        Function: ^realpathSync node:fs:2474:22
+      1  100.0%          Function: ^finalizeResolution node:internal/modules/esm/resolve:290:28
+      1  100.0%            Function: ^moduleResolve node:internal/modules/esm/resolve:894:23
+      1    7.1%        Function: ^nextPart node:fs:2463:31
+      1  100.0%          Function: ^realpathSync node:fs:2474:22
+      1  100.0%            Function: ^toRealPath node:internal/modules/cjs/loader:440:20
+      1    7.1%        Function: ^moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%          Function: ^moduleProvider node:internal/modules/esm/loader:452:28
+      1  100.0%            /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1    7.1%        Function: ^deserializeObject /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/bson.js:161:21
+      7    3.1%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:440:20
+      7  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      7  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      7  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      5    2.2%      LazyCompile: ~realpathSync node:fs:2474:22
+      5  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:440:20
+      5  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      5  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      4    1.8%      LazyCompile: ~patchProcessObject node:internal/process/pre_execution:112:28
+      4  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      4  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      4    1.8%      LazyCompile: ~onParseError node:internal/url:564:22
+      4  100.0%        /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      4  100.0%          LazyCompile: ~URL node:internal/url:637:14
+      4  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1034:30
+      3    1.3%      LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      3  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      3    1.3%      LazyCompile: ~fastparse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/parseurl/index.js:95:20
+      3  100.0%        LazyCompile: ~parseurl /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/parseurl/index.js:35:19
+      3  100.0%          LazyCompile: ~getPathname /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:537:21
+      3  100.0%            LazyCompile: ~next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      3    1.3%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      3  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      3  100.0%          LazyCompile: ~useColors /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/debug/src/node.js:155:19
+      3  100.0%            LazyCompile: ~createDebug /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/debug/src/common.js:60:22
+      3    1.3%      Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      3  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3  100.0%          LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:535:29
+      3  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      3    1.3%      Function: ^hash /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:596:14
+      2   66.7%        Function: ^isModified /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:425:24
+      2  100.0%          Function: ^shouldSave /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:440:24
+      2  100.0%            Function: ^end /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:250:27
+      1   33.3%        Function: ^generate /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:363:22
+      1  100.0%          Function: ^session /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:179:26
+      1  100.0%            LazyCompile: *trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+
+     76    2.4%  /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+     73   96.1%    /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      5    6.8%      LazyCompile: ~value node:internal/console/constructor:337:20
+      5  100.0%        LazyCompile: ~log node:internal/console/constructor:376:6
+      5  100.0%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      5  100.0%            Script: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/main.js:1:1
+      5    6.8%      /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1   20.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1   20.0%        Function: ^readPackage node:internal/modules/cjs/loader:326:21
+      1  100.0%          Function: ^tryPackage node:internal/modules/cjs/loader:385:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:541:28
+      1   20.0%        Function: ^insert node:internal/timers:355:16
+      1  100.0%          Function: ^setUnrefTimeout node:internal/timers:377:25
+      1  100.0%            Function: ^setStreamTimeout node:internal/stream_base_commons:237:26
+      1   20.0%        Function: ^hasServer /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology_description.js:237:14
+      1  100.0%          LazyCompile: ~serverUpdateHandler /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:319:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:479:53
+      1   20.0%        Function: ^getOwn node:internal/bootstrap/loaders:187:16
+      1  100.0%          Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1  100.0%            LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:290:15
+      4    5.5%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      4  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      4  100.0%          Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      4  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      3    4.1%      LazyCompile: ~readFileHandle node:internal/fs/promises:426:30
+      3  100.0%        /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      2    2.7%      LazyCompile: ~setupPerfHooks node:internal/process/pre_execution:367:24
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.7%      LazyCompile: ~processIncomingData /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      2  100.0%        LazyCompile: ~_write /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/message_stream.js:31:11
+      2  100.0%          LazyCompile: ~writeOrBuffer node:internal/streams/writable:368:23
+      2  100.0%            LazyCompile: ~_write node:internal/streams/writable:286:16
+      2    2.7%      LazyCompile: ~patchProcessObject node:internal/process/pre_execution:112:28
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.7%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      2  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      2  100.0%          LazyCompile: ~useColors /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/debug/src/node.js:155:19
+      2  100.0%            LazyCompile: ~createDebug /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/debug/src/common.js:60:22
+      2    2.7%      LazyCompile: ~createDebug /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/debug/src/common.js:60:22
+      2  100.0%        Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/engine.io/build/transport.js:1:1
+      2  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1113:37
+      2  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    1.4%      Script: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/app.js:1:1
+      1  100.0%        /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%            LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1    1.4%      LazyCompile: ~updateRsFromPrimary /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology_description.js:257:29
+      1  100.0%        LazyCompile: ~update /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology_description.js:131:11
+      1  100.0%          LazyCompile: ~serverUpdateHandler /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:319:24
+      1  100.0%            Function: ^<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:479:53
+      1    1.4%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:440:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:541:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    1.4%      LazyCompile: ~statSync node:fs:1588:18
+      1  100.0%        LazyCompile: ~tryStatSync node:internal/modules/esm/resolve:176:3
+      1  100.0%          LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:290:28
+      1  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:894:23
+      1    1.4%      LazyCompile: ~setupFetch node:internal/process/pre_execution:198:20
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.4%      LazyCompile: ~setupDebugEnv node:internal/process/pre_execution:324:23
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:36:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.4%      LazyCompile: ~selectServer /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:252:17
+      1  100.0%        LazyCompile: ~connect /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:153:12
+      1  100.0%          LazyCompile: ~createTopology /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%            LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/operations/connect.js:32:67
+      1    1.4%      LazyCompile: ~readFile node:internal/fs/promises:892:24
+      1  100.0%        LazyCompile: ~getSource node:internal/modules/esm/load:32:25
+      1  100.0%          LazyCompile: ~defaultLoad node:internal/modules/esm/load:72:27
+      1  100.0%            LazyCompile: ~ObjectDefineProperty.__proto__ node:internal/modules/esm/loader:148:5
+      1    1.4%      LazyCompile: ~random /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bcryptjs/dist/bcrypt.js:67:20
+      1  100.0%        LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bcryptjs/dist/bcrypt.js:43:17
+      1  100.0%          Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bcryptjs/dist/bcrypt.js:34:10
+      1  100.0%            Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bcryptjs/dist/bcrypt.js:1:1
+      1    1.4%      LazyCompile: ~parseHostName /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/whatwg-url/lib/url-state-machine.js:773:65
+      1  100.0%        Function: ^URLStateMachine /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/whatwg-url/lib/url-state-machine.js:481:25
+      1  100.0%          LazyCompile: ~module.exports.basicURLParse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/whatwg-url/lib/url-state-machine.js:1206:41
+      1  100.0%            LazyCompile: ~URLImpl /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/whatwg-url/lib/URL-impl.js:7:14
+      1    1.4%      LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:596:31
+      1  100.0%        LazyCompile: ~packageResolve node:internal/modules/esm/resolve:804:24
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:894:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1034:30
+      1    1.4%      LazyCompile: ~onParseError node:internal/url:564:22
+      1  100.0%        /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%          LazyCompile: ~URL node:internal/url:637:14
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1034:30
+      1    1.4%      LazyCompile: ~nextTick node:internal/process/task_queues:103:18
+      1  100.0%        LazyCompile: ~SonicBoom /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/sonic-boom/index.js:85:20
+      1  100.0%          LazyCompile: ~buildSafeSonicBoom /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/lib/tools.js:213:29
+      1  100.0%            LazyCompile: ~normalizeArgs /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/lib/tools.js:266:33
+      1    1.4%      LazyCompile: ~loadESM node:internal/process/esm_loader:88:41
+      1  100.0%        /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1    1.4%      LazyCompile: ~listOnTimeout node:internal/timers:512:25
+      1  100.0%        Function: ^processTimers node:internal/timers:492:25
+      1    1.4%      LazyCompile: ~handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        LazyCompile: ~trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:280:64
+      1  100.0%            LazyCompile: ~process_params /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:338:47
+      1    1.4%      LazyCompile: ~getCallers /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/lib/caller.js:7:38
+      1  100.0%        LazyCompile: ~pino /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/pino.js:84:15
+      1  100.0%          Script: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/src/middlewares/404.js:1:1
+      1  100.0%            /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1    1.4%      LazyCompile: ~fromString /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/utils.js:855:22
+      1  100.0%        LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/connection_string.js:66:45
+      1  100.0%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%            LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/connection_string.js:55:72
+      1    1.4%      LazyCompile: ~fastparse /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/parseurl/index.js:95:20
+      1  100.0%        LazyCompile: ~parseurl /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/parseurl/index.js:35:19
+      1  100.0%          LazyCompile: ~getPathname /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:537:21
+      1  100.0%            LazyCompile: ~next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      1    1.4%      LazyCompile: ~error /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/serve-static/index.js:115:39
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          LazyCompile: ~error /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:267:45
+      1  100.0%            LazyCompile: ~onStatError /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:412:57
+      1    1.4%      LazyCompile: ~end /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:250:27
+      1  100.0%        LazyCompile: ~end /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/compression/index.js:92:28
+      1  100.0%          LazyCompile: ~send /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:111:25
+      1  100.0%            Function: ^json /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/response.js:250:25
+      1    1.4%      LazyCompile: ~deserializeObject /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%        LazyCompile: ~deserializeObject /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/bson.js:161:21
+      1    1.4%      LazyCompile: ~decode node:internal/encoding:412:11
+      1  100.0%        LazyCompile: ~stringify node:internal/modules/esm/translators:94:19
+      1  100.0%          LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%            LazyCompile: ~moduleProvider node:internal/modules/esm/loader:452:28
+      1    1.4%      LazyCompile: ~createDebug /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/node_modules/debug/src/debug.js:63:21
+      1  100.0%        Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/send/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1168:37
+      1    1.4%      LazyCompile: ~concat node:buffer:541:32
+      1  100.0%        LazyCompile: ~writeCommand /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1  100.0%          LazyCompile: ~write /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:404:15
+      1  100.0%            LazyCompile: ~command /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1    1.4%      LazyCompile: ~_destroy node:internal/streams/destroy:77:18
+      1  100.0%        LazyCompile: ~destroy node:internal/streams/destroy:39:17
+      1  100.0%          LazyCompile: ~endReadableNT node:internal/streams/readable:1352:23
+      1  100.0%            Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.4%      LazyCompile: ~_copy node:buffer:205:15
+      1  100.0%        Function: ^copy node:buffer:781:16
+      1  100.0%          Function: ^deserializeObject /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            Function: ^deserializeObject /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/parser/deserializer.js:65:27
+      1    1.4%      LazyCompile: ~__extends /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/error.js:9:21
+      1  100.0%        Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/error.js:20:41
+      1  100.0%          Function: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/bson/lib/error.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1    1.4%      LazyCompile: ~Topology /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:41:16
+      1  100.0%        LazyCompile: ~createTopology /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/operations/connect.js:44:24
+      1  100.0%          LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/operations/connect.js:32:67
+      1  100.0%            LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/connection_string.js:72:39
+      1    1.4%      LazyCompile: ~Server /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/socket.io/dist/index.js:79:16
+      1  100.0%        LazyCompile: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/server.js:10:22
+      1  100.0%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%            LazyCompile: ~createServer file:///home/gaston/Backend-Coderhouse/desafioClase32/server.js:9:37
+      1    1.4%      LazyCompile: ~LOG /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/pino/lib/tools.js:37:16
+      1  100.0%        Function: ^infoLogger file:///home/gaston/Backend-Coderhouse/desafioClase32/src/middlewares/infoLogger.js:5:20
+      1  100.0%          Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:293:23
+      1    1.4%      LazyCompile: ~Hmac node:internal/crypto/hash:131:14
+      1  100.0%        LazyCompile: ~createHmac node:crypto:164:20
+      1  100.0%          LazyCompile: ~HMAC /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/auth/scram.js:225:14
+      1  100.0%            LazyCompile: ~continueScramConversation /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1    1.4%      LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%        LazyCompile: ~Socket node:net:329:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1    1.4%      LazyCompile: ~ConnectionPool /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection_pool.js:56:16
+      1  100.0%        LazyCompile: ~Server /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/server.js:29:16
+      1  100.0%          LazyCompile: ~createAndConnectServer /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:473:32
+      1  100.0%            LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/topology.js:172:57
+      1    1.4%      LazyCompile: ~Connection /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:37:16
+      1  100.0%        LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:31:63
+      1  100.0%          LazyCompile: ~callback /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:269:31
+      1  100.0%            LazyCompile: ~connectHandler /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:313:28
+      1    1.4%      LazyCompile: ~CommandOperation /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/operations/command.js:14:16
+      1  100.0%        LazyCompile: ~CreateIndexesOperation /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/operations/indexes.js:84:16
+      1  100.0%          LazyCompile: ~CreateIndexOperation /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/operations/indexes.js:127:16
+      1  100.0%            LazyCompile: ~createIndex /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/collection.js:253:16
+      1    1.4%      LazyCompile: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/server.js:10:22
+      1  100.0%        /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%          LazyCompile: ~createServer file:///home/gaston/Backend-Coderhouse/desafioClase32/server.js:9:37
+      1  100.0%            Script: ~<anonymous> file:///home/gaston/Backend-Coderhouse/desafioClase32/main.js:1:1
+      1    1.4%      LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/sdam/monitor.js:205:52
+      1  100.0%        LazyCompile: ~callback /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%          LazyCompile: ~<anonymous> /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1  100.0%            LazyCompile: ~onMessage /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/mongodb/lib/cmap/connection.js:156:14
+      1    1.4%      LazyCompile: ~#createModuleJob node:internal/modules/esm/loader:451:19
+      1  100.0%        LazyCompile: ~getModuleJob node:internal/modules/esm/loader:410:21
+      1  100.0%          /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1    1.4%      Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:353:29
+      1  100.0%            Function: ~<anonymous> node:_http_client:1:1
+      1    1.4%      Function: ^process_params /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:338:47
+      1  100.0%        Function: ^next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:136:31
+      1  100.0%            Function: ^router /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/index.js:46:18
+      1    1.4%      Function: ^get node:internal/bootstrap/node:421:8
+      1  100.0%        Function: ^infoController file:///home/gaston/Backend-Coderhouse/desafioClase32/src/controllers/infoController.js:3:24
+      1  100.0%          Function: ^handle /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^next /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express/lib/router/route.js:116:16
+      1    1.4%      Function: ^Cookie /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/session/cookie.js:25:46
+      1  100.0%        Function: ^store.generate /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:158:28
+      1  100.0%          Function: ^generate /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:363:22
+      1  100.0%            Function: ^session /home/gaston/Backend-Coderhouse/desafioClase32/node_modules/express-session/index.js:179:26
+      1    1.4%      Function: ^B node:internal/deps/cjs-module-lexer/dist/lexer:1:824
+      1  100.0%        Function: ^parse node:internal/deps/cjs-module-lexer/dist/lexer:1:131
+      1  100.0%          LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:193:34
+      1  100.0%            LazyCompile: ~commonjsStrategy node:internal/modules/esm/translators:147:60
+      1    1.4%      Function: ^<anonymous> node:internal/validators:401:42
+      1  100.0%        Function: ^compileFunction node:vm:316:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1073:18
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1113:37
+      1    1.4%      Function: ^<anonymous> node:internal/modules/esm/translators:160:67
+      1  100.0%        /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+      1  100.0%          LazyCompile: ~run node:internal/modules/esm/module_job:188:12
+      1  100.0%            /home/gaston/.nvm/versions/node/v18.12.1/bin/node
+
