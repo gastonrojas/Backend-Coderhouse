@@ -18,10 +18,10 @@ class MongodbContainer {
   async getAll() {
     try {
       const all = this.collection.find({}, this.options).toArray();
-      if(!all) throw new Error('error en base de datos')
       return await this.collection.find({}, this.options).toArray()
     } catch (error) {
       logger.error(error)
+      if(!all) throw new Error('error en base de datos')
     }
   };
   async getUserbyUsername(username){
@@ -60,7 +60,7 @@ class MongodbContainer {
 
 const users = new MongodbContainer(mongoConectionStr, 'ecommerce', 'users')
 
-export const products = new MongodbContainer(mongoConectionStr, 'ecommerce', 'products')
+export const products = new MongodbContainer(mongoConectionStr, 'ecommerce', 'productos')
 export const messages = new MongodbContainer(mongoConectionStr, 'ecommerce', 'messages')
 
 export default users;

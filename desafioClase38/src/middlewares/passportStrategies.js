@@ -7,8 +7,8 @@ export const registroLocal = new Strategy({
 },
     async (req, username, password, done) => {
         try {
-            await usersService.registerUser(req.body)
-            done(null, usuario);
+            const user = await usersService.registerUser(req.body)
+            done(null, user);
         } catch (error) {
             done(null, false, error);
         }
@@ -17,8 +17,8 @@ export const registroLocal = new Strategy({
 export const loginLocal = new Strategy(
     async (username, password, done) => {
         try {
-            const usuario = await autenticar(username, password);
-            done(null, usuario);
+            const user = await usersService.authenticate(username, password);
+            done(null, user);
         } catch (error) {
             done(null, false, error);
         }

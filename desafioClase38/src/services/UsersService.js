@@ -15,7 +15,7 @@ class UsersService {
     async authenticate(username, password) {
     let user
     try {
-        usuario = await users.getUserbyUsername(username)
+        user = await users.getUserbyUsername(username)
     } catch (error) {
         throw new Error('error de autenticacion')
     }
