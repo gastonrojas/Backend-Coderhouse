@@ -16,4 +16,6 @@ export const sessionConfig = {
     saveUninitialized: false,
 }
 
+export const PERS = process.env.PERS || "mongoAtlas"
+
 export default mongoUrl

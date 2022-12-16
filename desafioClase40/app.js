@@ -6,7 +6,7 @@ import {sessionHandler } from './src/middlewares/session.js';
 import { authRouter } from './src/routes/authRoute.js';
 import infoRoute from './src/routes/infoRoute.js';
 import randomsRoute from './src/routes/randomsRoute.js';
-import infoLogger from './src/middlewares/infoLogger.js';
+// import infoLogger from './src/middlewares/infoLogger.js';
 import notFound from './src/middlewares/404.js';
 
 
@@ -26,10 +26,10 @@ app.set('view engine', 'ejs');
 
 // rutas
 
-app.use('/', infoLogger,root);
-app.use('/auth', infoLogger, authRouter);
-app.use('/info', infoLogger,infoRoute);
-app.use('/api/randoms', infoLogger, randomsRoute);
+app.use('/', root);
+app.use('/auth', authRouter);
+app.use('/info', infoRoute);
+app.use('/api/randoms', randomsRoute);
 app.use(notFound)
 
 

@@ -40,8 +40,7 @@ addMessageForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const newMessage = {
-    author: {
-      id: addMessageForm[0].value,
+      email: addMessageForm[0].value,
       nombre: addMessageForm[1].value,
       apellido: addMessageForm[2].value,
       edad: addMessageForm[3].value,
@@ -52,8 +51,7 @@ addMessageForm.addEventListener('submit', (e) => {
       )}/${new Date().getFullYear()} ${('0' + new Date().getHours()).slice(-2)}:${('0' + new Date().getMinutes()).slice(
         -2
       )}:${('0' + new Date().getSeconds()).slice(-2)}`,
-    },
-    text: addMessageForm[6].value,
+      text: addMessageForm[6].value,
   };
 
   socket.emit('newMessage', newMessage);

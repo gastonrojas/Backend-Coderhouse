@@ -1,6 +1,6 @@
 import { Strategy } from 'passport-local';
 
-import usersService from '../services/UsersService.js'
+import usersService from '../business/usersServiceFactory.js';
 
 export const registroLocal = new Strategy({
     passReqToCallback: true,
@@ -8,6 +8,7 @@ export const registroLocal = new Strategy({
     async (req, username, password, done) => {
         try {
             const user = await usersService.registerUser(req.body)
+            console.log(user)
             done(null, user);
         } catch (error) {
             done(null, false, error);

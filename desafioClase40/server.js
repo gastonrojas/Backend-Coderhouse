@@ -2,8 +2,8 @@ import http from 'http';
 import {Server} from 'socket.io' 
 
 import app from './app.js';
-import productsService from './src/services/ProductsService.js';
-import messagesService from './src/services/MessagesService.js'
+import productsService from './src/business/productsServiceFactory.js';
+import messagesService from './src/business/messagesServiceFactory.js'
 
 
 export default function createServer(PORT) {
@@ -23,9 +23,9 @@ export default function createServer(PORT) {
       });
       
       socket.on('newMessage', async (newMessage) => {
-        await messagesService.storeNewMessage(newMessage)
-        const mensajes = await mensajesService.getMessages()
-        io.sockets.emit('messages', mensajes);
+        await messagesService.storeMessage(newMessage)
+        const messages = await messagesService.getMessages()
+        io.sockets.emit('messages', messages);
       });
 
     });
