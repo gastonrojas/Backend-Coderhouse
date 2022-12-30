@@ -14,4 +14,14 @@ export default class ProductsRepository{
         }
         return allProductsArray
     }
+    async getProductById(id){
+        const product = await this.dao.getById(id)
+        return new Product(product)
+    }
+    async updateProduct(id, productUpdated){
+        await this.dao.updateOneById(id, productUpdated.asDto());
+    }
+    async deleteProduct(id){
+        await this.dao.deleteOneById(id);
+    }
 }

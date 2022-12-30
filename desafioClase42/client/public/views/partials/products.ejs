@@ -1,0 +1,9 @@
+<ul>
+    <%for (const product of products) {  %>
+            <li> 
+                <a href="/detalle/<%= product.id%>">
+                    <%= product.title %>
+                </a>
+            </li>
+   <% } %>
+</ul>

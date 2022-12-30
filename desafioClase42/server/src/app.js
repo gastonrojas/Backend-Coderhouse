@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors'
 
 import { root } from './routes/root.js';
 import { passportMiddleware, passportSessionHandler } from './middlewares/passport.js';
@@ -14,7 +15,7 @@ const app = express();
 
 
 // middlewares
-
+app.use(cors({origin: 'http://localhost:3030'}))
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

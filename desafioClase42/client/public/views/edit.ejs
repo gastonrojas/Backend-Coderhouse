@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/ejs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Editar producto</h1>
+
+    <form id="editProductForm">
+
+
+        <label for="title">Titulo</label>
+        <input type="text" name="title" id="title" value="<%= product.title %> ">
+
+        <br>
+
+        <label for="title">Precio</label>
+        <input type="text" name="price" id="price" value="<%= product.price %> ">
+        
+        <br>  
+
+        <label for="title">Url Imagen</label>
+        <input type="url" name="thumbnail" id="thumbnail" value="<%= product.thumbnail %> ">
+        <br>    
+        <input style="display: none;" type="text" value="<%= product.id %>">
+        <button type="submit"> Editar  </button>
+
+    </form>
+    <script src="/js/edit.js" >  </script>
+</body>
+</html>

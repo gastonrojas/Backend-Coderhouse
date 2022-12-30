@@ -1,7 +1,4 @@
-import pino from 'pino';
 import mongoDatabase from '../mongoDatabase.js';
-
-const logger = pino('pinoLogs/error.log')
 
 export default class MongodbContainer {
   constructor(collection) {
@@ -12,7 +9,6 @@ export default class MongodbContainer {
     try {
       return await this.collection.find({}, this.options).toArray()
     } catch (error) {
-      logger.error(error)
       throw new Error('error en base de datos')
     }
   };
@@ -21,7 +17,6 @@ export default class MongodbContainer {
       const user = await this.collection.findOne({username}, this.options)
       return user
     } catch (error) {
-      logger.error(error)
       throw new Error('error en base de datos')
     }
   }
@@ -32,21 +27,20 @@ export default class MongodbContainer {
       if (!user) throw new Error('NOT_FOUND: Datos incorrectos. Intente nuevamente.')
       return user
     } catch (error) {
-      logger.error(error)
+      throw new Error('error en base de datos')
     }
   }
   async save(obj) {
     try{
      await this.collection.insertOne({...obj});
     }catch(error){
-      logger.error(error)
+      throw new Error('error en base de datos')
     }
   };
+  async updateOneById(id, obj){
+    await this.collection.replaceOne({id}, obj)
+  };
+  async deleteOneById(id){
+    await this.collection.deleteOne({id})
+  };
 };
-
-// const users = new MongodbContainer(mongoConectionStr, 'ecommerce', 'users')
-
-// export const products = new MongodbContainer(mongoConectionStr, 'ecommerce', 'productos')
-// export const messages = new MongodbContainer(mongoConectionStr, 'ecommerce', 'messages')
-
-

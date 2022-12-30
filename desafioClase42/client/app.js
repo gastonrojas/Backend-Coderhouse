@@ -1,19 +1,14 @@
 import express from "express";
-import axios from "axios";
 
-axios.defaults.baseURL = 'http://localhost:8080'
+import router from './routes/router.js'
 
 const app = express();
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-app.set('views', './views');
+app.set('views', './public/views');
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res)=>{
-    const data = axios.get()
-    console.log(data)
-    res.json(data)
-})
+app.use('/', router)
 
-app.listen(3030)
+app.listen(3030, ()=> console.log("Servidor escuchando puerto 3030"))
