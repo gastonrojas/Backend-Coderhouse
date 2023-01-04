@@ -1,25 +1,46 @@
-export default class ProductsController {
-    constructor(api){
-        this.api = api
-        this.hola = 'hola'
-    }
-    async getAll(req, res, next){
-        try {
-            const products = await this.api.getProducts();
-            res.status(200).json(products);
-        } catch (error) {
-            console.log(error)
-            res.send(error);
-        }
-    }
+import productsApi from "../business/productsServiceFactory.js";
 
-    async store(req, res, next){
+export default {
+    async getAll(){
         try {
-            await this.api.storeProduct(req.body);
-            res.redirect('/api/products');
+            const products = await productsApi.getProducts();
+            return products
         } catch (error) {
-            res.status(500).json(error);
+
+            return error
+        }
+    },
+    async getById({id}){
+        try {
+            const product = await productsApi.getProductById(id)
+            return product
+        } catch (error) {
+            return undefined
+        }
+
+    },
+    async store({input}){
+        try {
+            const newProduct = await productsApi.storeProduct(input);
+            return newProduct
+        } catch (error) {
+            return error
+        }
+    },
+    async update({id, input}){
+        try {
+            const product = await productsApi.updateProduct(id, input)
+            return product
+        } catch (error) {
+            return error
+        }
+    },
+    async delete({id}){
+        try{
+            const deletedProduct = await productsApi.deleteProduct(id)
+            return deletedProduct
+        } catch(error){
+            return error
         }
     }
 }
-

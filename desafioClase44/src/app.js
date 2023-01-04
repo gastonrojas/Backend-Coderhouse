@@ -6,8 +6,8 @@ import {sessionHandler } from './middlewares/session.js';
 import { authRouter } from './routes/authRoute.js';
 import infoRoute from './routes/infoRoute.js';
 import randomsRoute from './routes/randomsRoute.js';
-// import infoLogger from './src/middlewares/infoLogger.js';
-import productsRoute from './routes/productsRouteFactory.js'
+
+import productsRoute from './routes/productsRoute.js'
 import notFound from './middlewares/404.js';
 
 const app = express();
