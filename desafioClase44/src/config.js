@@ -5,9 +5,9 @@ import { config } from 'dotenv';
 
 config()
 
-export const numCpus = os.cpus().length
-
 const mongoUrl = process.env.MONGODB_STRING
+
+export const numCpus = os.cpus().length
 
 export const sessionConfig = {
     store: MongoStore.create({mongoUrl, ttl: 600}),
