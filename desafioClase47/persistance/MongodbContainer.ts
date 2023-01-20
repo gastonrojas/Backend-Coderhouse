@@ -3,7 +3,30 @@ import { MongoClient } from '../deps.ts';
 const client = new MongoClient();
 const URI = "mongodb://127.0.0.1:27017";
 try {
-  await client.connect(URI);
+  await client.connect({
+    db: "coderhouse",
+    tls: true,
+    servers: [
+      {
+        host: "ac-fud4nf6-shard-00-01.dsxycmp.mongodb.net",
+        port: 27017,
+      },
+      {
+        host: "ac-fud4nf6-shard-00-00.dsxycmp.mongodb.net",
+        port: 27017,
+      },
+      {
+        host: "ac-fud4nf6-shard-00-02.dsxycmp.mongodb.net",
+        port: 27017,
+      }
+    ],
+    credential: {
+      username: "gaston",
+      password: "eskorbuto",
+      db: "ecommerce",
+      mechanism: "SCRAM-SHA-1",
+    },
+  })
   console.log("Base de datos conectada");
 } catch (error) {
   console.log(error)
