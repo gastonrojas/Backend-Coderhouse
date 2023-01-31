@@ -1,7 +1,7 @@
 import { MongoClient } from '../deps.ts';
 
 const client = new MongoClient();
-const URI = "mongodb://127.0.0.1:27017";
+
 try {
   await client.connect({
     db: "coderhouse",

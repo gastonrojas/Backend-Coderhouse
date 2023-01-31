@@ -6,7 +6,6 @@ export default {
             const products = await productsApi.getProducts();
             return products
         } catch (error) {
-
             return error
         }
     },

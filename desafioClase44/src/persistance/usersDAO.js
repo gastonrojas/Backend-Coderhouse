@@ -8,6 +8,4 @@ switch(PERS){
         usersDao = new MongodbContainer('users')
 }
 
-
-
 export default usersDao;
